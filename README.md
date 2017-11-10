@@ -28,7 +28,7 @@ DB_URI=mongodb://localhost:27017/test
 This project responds to localhost:3000/
 ```
 
-## Add Dvds
+## Add Dvds
 
 ```
     curl -X POST --data "name=YOUR FAVOURITE FILM&description=Description of the film you want to save.&image=string with an html" localhost:3000/dvds
