@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npm install",
     "postinstall": "bower install",
     "start": "node index",
-    "dev": "supervisor index"
+    "dev": "supervisor index",
+    "build": "browserify src/js/app.js > client/app.js",
+    "build:watch": "watchify -t babelify src/js/app.js - d -o client/app.js -v"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,9 @@
     "mongoose": "^4.13.1"
   },
   "devDependencies": {
-    "supervisor": "^0.12.0"
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "supervisor": "^0.12.0",
+    "watchify": "^3.9.0"
   }
 }

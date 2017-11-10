@@ -1,0 +1,2 @@
+const angular = rrequire('angular')
+
