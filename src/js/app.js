@@ -1,2 +1,2 @@
-const angular = rrequire('angular')
+const angular = require('angular')
 
