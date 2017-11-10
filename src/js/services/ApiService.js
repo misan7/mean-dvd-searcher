@@ -1,7 +1,7 @@
 function DataService ($http) {
 
 	function getAllDvds() {
-		return $http.get('dvds')
+		return $http.get('api/dvds')
 			.then( response => response.data )
 	}
 

@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 /* static folder */
 app.use( express.static(path.join(__dirname, '../client')))
 
-app.use('/dvds', routesDvds)
-app.use('/dvd', routesDvd)
+app.use('/api/dvds', routesDvds)
+app.use('/api/dvd', routesDvd)
 
 module.exports = app
