@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="dvdApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Dvd Searcher</title>
@@ -8,7 +8,7 @@
 	<h1>DVD SEARCHER</h1>
 	<h2>{{3+8}}</h2>
 
-	<div>
+	<div ng-controller="MainController">
 		<ul>
 			<li>
 				{{ dvd.name }}

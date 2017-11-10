@@ -9,7 +9,7 @@
     "start": "node index",
     "dev": "supervisor index",
     "build": "browserify src/js/app.js > client/app.js",
-    "build:watch": "watchify -t babelify src/js/app.js - d -o client/app.js -v"
+    "build:watch": "watchify -t babelify src/js/app.js -d -o client/app.js -v"
   },
   "author": "",
   "license": "ISC",
