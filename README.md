@@ -52,7 +52,7 @@ or directly:
     curl -X DELETE localhost:3000/dvd/593515e497637fe91422a9d2
 ```
 
-## Update Dvd
+## Update Dvd
 
 ```
     curl -X PUT --data "name=Inception" localhost:3000/dvd/59351820a38462ec408d15d1

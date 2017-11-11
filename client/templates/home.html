@@ -1,9 +1,22 @@
-<div>
-	<h1>This is the HOME Template</h1>
-	<p>Text about Home Template and other stuff</p>
-	<ul>
-		<li ng-repeat="dvd in dvds">
-			{{dvd.name}}
-		</li>
-	</ul>
+
+<div class="container bg">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3 rwrapper">
+    <ul>
+     <li class="rlisting" ng-repeat="dvd in dvds">
+        <div class="col-md-12 nopad">
+          <img src="http://dummyimage.com/250x250" class="img-responsive">
+        </div>
+        <div class="col-md-12 nopad">
+          <h5>{{ dvd.name }}</h5>
+           <p>{{ dvd.description }}</p>
+           <div class="rfooter">
+             <i class="fa fa-phone-square"></i> +3000000
+           </div>
+        </div>
+      </li>
+      </ul>
+    </div>
+</div>
 </div>
