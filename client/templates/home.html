@@ -1,22 +1,26 @@
-
 <div class="container bg">
 
 <div class="row">
+  <ul>
+    <li ng-repeat="dvd in dvds">
     <div class="col-xs-12 col-sm-6 col-md-3 rwrapper">
-    <ul>
-     <li class="rlisting" ng-repeat="dvd in dvds">
+     <div class="rlisting">
         <div class="col-md-12 nopad">
-          <img src="http://dummyimage.com/250x250" class="img-responsive">
+          <img ng-style="{'background-image':'url({{ dvd.image }})'}" class="img-bg" ng-alt="{{dvd.name}}">
         </div>
         <div class="col-md-12 nopad">
           <h5>{{ dvd.name }}</h5>
            <p>{{ dvd.description }}</p>
            <div class="rfooter">
-             <i class="fa fa-phone-square"></i> +3000000
+             <p class="available_p">Disponible</p>
+             <button>{{ dvd.availability }}</button>
            </div>
         </div>
-      </li>
-      </ul>
+      </div>
     </div>
-</div>
+    </li>
+
+    
+    </ul>
+ </div>
 </div>

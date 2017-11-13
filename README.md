@@ -31,30 +31,30 @@ This project responds to localhost:3000/
 ## Get Dvds
 
 ```
-   curl -X GET -d data localhost:3000/dvds
+   curl -X GET -d data localhost:3000/api/dvds
 ```
 
 or directly:
 
 ```
-    curl localhost:3000/dvds
+    curl localhost:3000/api/dvds
 ```
 
 ## Add Dvds
 
 ```
-    curl -X POST --data "name=YOUR FAVOURITE FILM&description=Description of the film you want to save.&image=string with an html" localhost:3000/dvds
+    curl -X POST --data "name=YOUR FAVOURITE FILM&description=Description of the film you want to save.&image=string with an html" localhost:3000/api/dvds
 ```
 
 ## Remove Dvd
 
 ```
-    curl -X DELETE localhost:3000/dvd/593515e497637fe91422a9d2
+    curl -X DELETE localhost:3000/api/dvd/593515e497637fe91422a9d2
 ```
 
 ## Update Dvd
 
 ```
-    curl -X PUT --data "name=Inception" localhost:3000/dvd/59351820a38462ec408d15d1
+    curl -X PUT --data "name=Big Fish" localhost:3000/api/dvd/59351820a38462ec408d15d1
 ```
 

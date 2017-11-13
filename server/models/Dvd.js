@@ -7,7 +7,10 @@ const DvdSchema = new mongoose.Schema({
 		required: true
 	},
 	description: String,
-	availability: Boolean,
+	availability: {
+		type: Boolean,
+		default:false
+	},
 	image: String
 
 }, { collection })
