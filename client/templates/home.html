@@ -1,26 +1,22 @@
 <div class="container bg">
 
-<div class="row">
-  <ul>
-    <li ng-repeat="dvd in dvds">
-    <div class="col-xs-12 col-sm-6 col-md-3 rwrapper">
-     <div class="rlisting">
-        <div class="col-md-12 nopad">
-          <img ng-style="{'background-image':'url({{ dvd.image }})'}" class="img-bg" ng-alt="{{dvd.name}}">
-        </div>
-        <div class="col-md-12 nopad">
-          <h5>{{ dvd.name }}</h5>
-           <p>{{ dvd.description }}</p>
-           <div class="rfooter">
-             <p class="available_p">Disponible</p>
-             <button>{{ dvd.availability }}</button>
-           </div>
-        </div>
-      </div>
-    </div>
-    </li>
-
-    
-    </ul>
- </div>
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th class="span1">Título</th>
+      <th class="span1">Descripción</th>
+      <th class="span1"><input type="checkbox"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="dvd in dvds">
+      <td><strong><button class="btn btn-secondary" type="button">{{ dvd.name }}</button></strong></td>
+      <td>{{ dvd.description }}</td>
+      <td><input type="checkbox">{{ dvd.availability }} <a href="#"><i class="icon-star-empty"></i></a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="text-center" id="dvd_{{ dvd._id }}">
+  <img src="https://res.cloudinary.com/dk2mgboya/image/upload/v1497002784/a_cameron_jnuycl.jpg" class="rounded" alt="{{ dvd.name }}">
 </div>
