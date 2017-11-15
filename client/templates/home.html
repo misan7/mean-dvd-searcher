@@ -10,13 +10,14 @@
   </thead>
   <tbody>
     <tr ng-repeat="dvd in dvds">
-      <td><strong><button class="btn btn-secondary" type="button">{{ dvd.name }}</button></strong></td>
+      <td><strong><button ng-click="showImage(dvd)" class="btn btn-secondary" type="button">{{ dvd.name }}</button></strong></td>
       <td>{{ dvd.description }}</td>
       <td><input type="checkbox">{{ dvd.availability }} <a href="#"><i class="icon-star-empty"></i></a></td>
     </tr>
     </tbody>
   </table>
 </div>
-<div class="text-center" id="dvd_{{ dvd._id }}">
-  <img src="https://res.cloudinary.com/dk2mgboya/image/upload/v1497002784/a_cameron_jnuycl.jpg" class="rounded" alt="{{ dvd.name }}">
+<div class="text-center">
+  <img src="{{ dvd.image }}" class="rounded" alt="{{ dvd.name }}">
+  <h1></h1>
 </div>

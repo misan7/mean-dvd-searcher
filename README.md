@@ -58,3 +58,9 @@ or directly:
     curl -X PUT --data "name=Big Fish" localhost:3000/api/dvd/59351820a38462ec408d15d1
 ```
 
+## Get Dvd by ID
+
+```
+    curl localhost:3000/api/dvd/5a09cb5031f3da1bcc58cea6
+```
+
