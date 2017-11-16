@@ -5,19 +5,19 @@
     <tr>
       <th class="span1">Título</th>
       <th class="span1">Descripción</th>
-      <th class="span1"><input type="checkbox"></th>
+      <th class="span1">Disponibilidad</th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="dvd in dvds">
-      <td><strong><button ng-click="showImage(dvd)" class="btn btn-secondary" type="button">{{ dvd.name }}</button></strong></td>
+      <td><strong><button ng-click="showImage(dvd)" class="btn btn-secondary btn-css" type="button">{{ dvd.name }}</button></strong></td>
       <td>{{ dvd.description }}</td>
-      <td><input type="checkbox">{{ dvd.availability }} <a href="#"><i class="icon-star-empty"></i></a></td>
+      <td><input type="checkbox" ng-model="dvd.availability"></td>
     </tr>
     </tbody>
   </table>
 </div>
 <div class="text-center">
-  <img src="{{ dvd.image }}" class="rounded" alt="{{ dvd.name }}">
-  <h1></h1>
+    <h1>Carátula</h1>
+  <img src="{{ dvd.image }}" class="rounded img-bg" alt="{{ dvd.name }} - No hay foto Disponible -">
 </div>
