@@ -1,4 +1,4 @@
-function MainController($scope, ApiService) {
+function HomeController($scope, ApiService) {
 
 	$scope.showImage = (dvd) => {
 		const id = dvd._id
@@ -16,4 +16,4 @@ function MainController($scope, ApiService) {
 
 }
 
-module.exports = MainController
+module.exports = HomeController
