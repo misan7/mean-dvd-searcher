@@ -7,8 +7,12 @@ function DataService ($http) {
 	function getDvdById(id) {
 		return $http.get(`/api/dvd/${id}`)
 	}
+	function addDvd( data ) {
+		return $http.post('/api/dvds', data)
+			.then( response => response.data )
+	}
 
-	return { getAllDvds, getDvdById }
+	return { getAllDvds, getDvdById, addDvd }
 }
 
 module.exports = DataService

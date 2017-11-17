@@ -11,6 +11,7 @@ function HomeController($scope, ApiService) {
 				$scope.dvd = response.data
 			})
 	}
+
 	ApiService.getAllDvds()
 		.then( dvds => $scope.dvds = dvds )
 

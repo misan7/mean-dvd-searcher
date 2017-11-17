@@ -6,6 +6,7 @@ function routesConfig($routeProvider) {
         })
         .when('/addDvd', {
           templateUrl: '/templates/addDvdPanel.html',
+          controller: 'AddController'
         })
 
   }

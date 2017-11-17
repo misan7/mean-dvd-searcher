@@ -1,1 +1,20 @@
-<h1>DVD PANEL</h1>
+<h1>Add your DVD's Collection</h1>
+<form ng-submit="addDvd()">
+    <div class="form-group">
+        <label for="nameDvd">Name</label>
+        <input ng-model="name" name="nameDvd" type="text" class="form-control" id="nameDvd" placeholder="Dvd Name...">
+    </div>
+    <div class="form-group">
+        <label for="descriptionDvd">Description</label>
+        <input ng-model="description" name="descriptionDvd" type="text" class="form-control" id="descriptionDvd" placeholder="Dvd Description...">
+    </div>
+    <div class="form-group">
+        <label for="imageDvd">Image URL</label>
+        <input ng-model="image" name="imageDvd" type="string" class="form-control" id="imageDvd" placeholder="Dvd Image URL...">
+    </div>
+    <div class="form-group">
+        <label for="availabilityDvd">Availability</label>
+        <input ng-model="availability" name="availabilityDvd" type="checkbox" class="form-control" id="availabilityDvd">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
