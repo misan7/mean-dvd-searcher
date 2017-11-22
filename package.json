@@ -10,7 +10,8 @@
     "build:js": "browserify src/js/app.js > client/app.js",
     "build:js:watch": "watchify -t babelify src/js/app.js -d -o client/app.js -v",
     "build:scss": "node-sass src/scss/styles.scss client/styles.css",
-    "build:scss:watch": "node-sass src/scss/styles.scss client/styles.css --watch"
+    "build:scss:watch": "node-sass src/scss/styles.scss client/styles.css --watch",
+    "work": "npm-run-all --parallel dev build:js:watch build:scss:watch"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "babelify": "^8.0.0",
     "browserify": "^14.5.0",
     "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.2",
     "supervisor": "^0.12.0",
     "watchify": "^3.9.0"
   }
