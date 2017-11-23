@@ -1,6 +1,12 @@
 # MEAN - DVD Searcher
 
+This project is made with Angular 1, MongoDB and Mongoose, Express and Node.js.
+
+I used **Browserify** to compile **Javascript** code and **Babelify**. **Bootstrap 4** and **Sass** for styling the app.
+
 ## Installation
+
+You need **[Node.js](https://nodejs.org/es/)** to test this app.
 
 ### .env File Configuration
 
@@ -20,7 +26,7 @@ DB_URI=mongodb://localhost:27017/test
 
 ### Run the Server:
 
-`npm start` in your console to install **bower** and **npm packages**.
+`npm start` in your console to install **npm packages**.
 
 ### The URL to start in localhost:
 
@@ -28,7 +34,17 @@ DB_URI=mongodb://localhost:27017/test
 This project responds to localhost:3000/
 ```
 
-## Get Dvds
+## Development environment
+
+If you want to edit the code easily, I've created a Script to start in parallel some process. This command in console **`npm run work`** will help with...
+
+```
+    "work": "npm-run-all --parallel dev build:js:watch build:scss:watch"
+```
+
+## Endpoints
+
+### Get Dvds
 
 ```
    curl -X GET -d data localhost:3000/api/dvds
@@ -40,25 +56,25 @@ or directly:
     curl localhost:3000/api/dvds
 ```
 
-## Add Dvds
+### Add Dvds
 
 ```
     curl -X POST --data "name=YOUR FAVOURITE FILM&description=Description of the film you want to save.&image=string with an html" localhost:3000/api/dvds
 ```
 
-## Remove Dvd
+### Remove Dvd
 
 ```
     curl -X DELETE localhost:3000/api/dvd/593515e497637fe91422a9d2
 ```
 
-## Update Dvd
+### Update Dvd
 
 ```
     curl -X PUT --data "name=Big Fish" localhost:3000/api/dvd/59351820a38462ec408d15d1
 ```
 
-## Get Dvd by ID
+### Get Dvd by ID
 
 ```
     curl localhost:3000/api/dvd/5a09cb5031f3da1bcc58cea6
