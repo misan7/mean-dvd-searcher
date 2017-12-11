@@ -15,6 +15,16 @@ function HomeController($scope, ApiService) {
 	ApiService.getAllDvds()
 		.then( dvds => $scope.dvds = dvds )
 
+	$scope.removeFilm = (id) => {
+
+		ApiService.removeDvd(id)
+			.then( response => {
+				console.log("response", response);
+
+			})
+	}
 }
+
+
 
 module.exports = HomeController

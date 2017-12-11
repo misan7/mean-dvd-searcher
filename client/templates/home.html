@@ -13,6 +13,7 @@
       <td><strong><button ng-click="showImage(dvd)" class="btn btn-secondary btn-css" type="button">{{ dvd.name }}</button></strong></td>
       <td>{{ dvd.description }}</td>
       <td><input type="checkbox" ng-model="dvd.availability"></td>
+      <td><a href="#" class="btn btn-danger" role="button" ng-click="removeFilm(dvd._id)">Borrar</a></td>
     </tr>
     </tbody>
   </table>
