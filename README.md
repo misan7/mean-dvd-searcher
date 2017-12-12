@@ -80,3 +80,20 @@ or directly:
     curl localhost:3000/api/dvd/5a09cb5031f3da1bcc58cea6
 ```
 
+## Web Scraping
+
+I used [cheerio](https://cheerio.js.org/) for parsing some Star Wars films from [filmaffinity](https://www.filmaffinity.com/es/main.html).
+
+For using this database, you just have to enter to the root:
+
+```
+./server/parser/
+```
+
+Then use the command:
+
+```
+node getFilms.js
+```
+
+You will have a list of Star Wars films in your database.
