@@ -6,7 +6,7 @@ function HomeController($scope, ApiService) {
 
 		ApiService.getDvdById(id)
 			.then( response => { 
-				console.log("response", response);
+				toastr.info('I am your father')
 
 				$scope.dvd = response.data
 			})
