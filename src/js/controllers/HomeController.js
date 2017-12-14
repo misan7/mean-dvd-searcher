@@ -1,30 +1,28 @@
-function HomeController($scope, ApiService) {
-
-	$scope.showImage = (dvd) => {
-		const id = dvd._id
-		console.log("Element with id: " + id + " clicked")
-
-		ApiService.getDvdById(id)
-			.then( response => { 
-				toastr.info('I am your father')
-
-				$scope.dvd = response.data
-			})
-	}
+function HomeController( $scope, ApiService ) {
 
 	ApiService.getAllDvds()
 		.then( dvds => $scope.dvds = dvds )
+
+	$scope.showImage = (dvd) => {
+		const id = dvd._id
+
+		ApiService.getDvdById(id)
+			.then( response => { 
+				$scope.dvd = response.data
+			})
+	}
 
 	$scope.removeFilm = (id) => {
 
 		ApiService.removeDvd(id)
 			.then( response => {
-				console.log("response", response);
+				toastr.info('DVD deleted from the list')
 
+			})
+			.catch( error => {
+				toastr.error('Cannot delete the DVD', 'Error')
 			})
 	}
 }
-
-
 
 module.exports = HomeController
