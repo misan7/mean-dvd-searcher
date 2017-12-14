@@ -3,9 +3,10 @@
 <table class="table table-condensed table-hover">
   <thead>
     <tr>
-      <th class="span1">Título</th>
-      <th class="span1">Descripción</th>
-      <th class="span1">Disponibilidad</th>
+      <th class="span1">Title</th>
+      <th class="span1">Director</th>
+      <th class="span1">Availability</th>
+      <th class="span1"></th>
     </tr>
   </thead>
   <tbody>
@@ -13,12 +14,13 @@
       <td><strong><button ng-click="showImage(dvd)" class="btn btn-secondary btn-css" type="button">{{ dvd.name }}</button></strong></td>
       <td>{{ dvd.description }}</td>
       <td><input type="checkbox" ng-model="dvd.availability"></td>
-      <td><a href="#" class="btn btn-danger" role="button" ng-click="removeFilm(dvd._id)">Borrar</a></td>
+      <td><button class="btn-css btn btn-danger" ng-click="removeFilm(dvd._id, $index)">Remove</button></td>
+
     </tr>
     </tbody>
   </table>
 </div>
 <div class="text-center">
-    <h1>Carátula</h1>
-  <img src="{{ dvd.image }}" class="rounded img-bg" alt="{{ dvd.name }} - No hay foto Disponible -">
+    <h1>Cover</h1>
+  <img src="{{ dvd.image }}" class="rounded img-bg" alt="{{ dvd.name }} - No image -">
 </div>

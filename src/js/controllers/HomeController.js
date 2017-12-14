@@ -12,7 +12,9 @@ function HomeController( $scope, ApiService ) {
 			})
 	}
 
-	$scope.removeFilm = (id) => {
+	$scope.removeFilm = (id, index) => {
+
+		$scope.dvds.splice(index, 1)
 
 		ApiService.removeDvd(id)
 			.then( response => {
