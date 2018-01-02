@@ -8,7 +8,7 @@
     "start": "node index",
     "dev": "supervisor index",
     "build:js": "browserify client/src/js/app.js > client/public/app.js",
-    "build:js:watch": "watchify -t babelify client/src/js/app.js -d -o client/public/app.js -v",
+    "build:js:watch": "watchify -t babelify -t brfs client/src/js/app.js -d -o client/public/app.js -v",
     "build:scss": "node-sass client/src/scss/styles.scss client/public/styles.css",
     "build:scss:watch": "node-sass client/src/scss/styles.scss client/public/styles.css --watch",
     "work": "npm-run-all --parallel dev build:js:watch build:scss:watch"
@@ -24,7 +24,9 @@
   "devDependencies": {
     "angular": "^1.6.6",
     "angular-route": "^1.6.6",
+    "babel-core": "^6.26.0",
     "babelify": "^8.0.0",
+    "brfs": "^1.4.3",
     "browserify": "^14.5.0",
     "cheerio": "^1.0.0-rc.2",
     "node-sass": "^4.5.3",
